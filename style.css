@@ -1,0 +1,122 @@
+/* Basic Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #c5b446; /* Light background for the entire app */
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Login Container Styling */
+#login-container {
+  width: 100%;
+  max-width: 500px;
+  margin: 20px;
+  background: #34556f; /* Light blue background */
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Register and App Containers */
+#register-container, #app-container {
+  width: 100%;
+  max-width: 500px;
+  margin: 20px;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Headers Styling */
+h2, h3 {
+  color: #333;
+}
+
+/* Input and Button Styling */
+input, select, button {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+/* Button Colors */
+button {
+  background-color: #ff7043; /* Orange color for button */
+  color: white;
+  border: none;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #e64a19; /* Slightly darker orange for hover */
+}
+
+button:active {
+  background-color: #d32f2f; /* Even darker for active state */
+}
+
+/* Input Focus Styling */
+input:focus, select:focus {
+  border-color: #ff7043; /* Orange focus border */
+  outline: none;
+}
+
+/* Medication Card Styling */
+.medication-card {
+  background: #e9f7fc;
+  margin: 10px 0;
+  padding: 15px;
+  border-left: 5px solid #17a2b8;
+  text-align: left;
+  border-radius: 6px;
+  position: relative;
+}
+
+.delete-btn {
+  background: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  border-radius: 4px;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 600px) {
+  body {
+      padding: 10px;
+  }
+  #login-container, #register-container, #app-container {
+      width: 100%;
+  }
+  input, select, button {
+      font-size: 16px;
+  }
+}
+
+/* Filter Section */
+.filter-section {
+  background-color: #f1f1f1;
+  padding: 15px;
+  margin-top: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+#summary-count, #total-count {
+  font-weight: bold;
+  color: #28a745; /* Green */
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MediLog - Personal Medication Tracker</title>
+  <link rel="stylesheet" href="style.css"/>
+  <script defer src="scripts.js"></script>
+</head>
+<body>
+  <div id="login-container">
+    <h2>Login</h2>
+    <input type="text" id="username" placeholder="Enter Username"/>
+    <input type="password" id="password" placeholder="Enter Password"/>
+    <button onclick="login()">Login</button>
+    <p>Don't have an account? <a href="#" onclick="showRegister()">Register</a></p>
+  </div>
+
+  <div id="register-container" style="display: none;">
+    <h2>Register</h2>
+    <input type="text" id="reg-username" placeholder="Choose a Username"/>
+    <input type="password" id="reg-password" placeholder="Choose a Password"/>
+    <button onclick="register()">Register</button>
+    <p>Already have an account? <a href="#" onclick="showLogin()">Login</a></p>
+  </div>
+
+  <div id="app-container" style="display: none;">
+    <h2>MediLog - Personal Medication Tracker</h2>
+    <button onclick="logout()">Logout</button>
+
+    <!-- Medication Form -->
+    <div class="form-section">
+      <h3>Add Medication</h3>
+      <input type="text" id="medicationName" placeholder="Medication Name"/>
+      <input type="text" id="dosage" placeholder="Dosage (e.g., 500mg)"/>
+      <input type="text" id="frequency" placeholder="Frequency (e.g., 2 times a day)"/>
+      <input type="date" id="startDate"/>
+      <input type="text" id="notes" placeholder="Notes (optional)"/>
+      <select id="status">
+        <option value="Active">Active</option>
+        <option value="Inactive">Inactive</option>
+        <option value="Completed">Completed</option>
+      </select>
+      <button onclick="addMedication()">Add Medication</button>
+    </div>
+
+    <!-- Summary -->
+    <h3>Active Medications: <span id="summary-count">0</span> | Total Medications: <span id="total-count">0</span></h3>
+
+    <!-- Filters -->
+    <div class="filter-section">
+      <h3>Filter Medications</h3>
+      <select id="filterStatus" onchange="filterMedications()">
+        <option value="all">All</option>
+        <option value="Active">Active</option>
+        <option value="Inactive">Inactive</option>
+        <option value="Completed">Completed</option>
+      </select>
+    </div>
+
+    <!-- Medications List -->
+    <div id="medicationList"></div>
+  </div>
+</body>
+</html>
